@@ -6,17 +6,17 @@ h1 {
     text-align: center;
     padding: 20px 10px;
 }
-.center{
+.center {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
-.left{
+.left {
     width: 60%;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
 }
-.mainImage{
+.mainImage, .answerImage {
     border: 1px solid black;
     padding: 35px;
     margin-right: 10px;
@@ -28,4 +28,7 @@ button {
     border-radius: 15px;
     font-size: 14px;
     font-family: "Verdana";
+}
+.answerImage {
+    display: none;
 }

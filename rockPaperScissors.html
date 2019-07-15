@@ -9,11 +9,16 @@
                    img.style.display = "none"
                }
              })
+            computersAnswer.style.display = "block"
             }
 
         Array.from(allImages).forEach(img => {
             img.addEventListener("click", hideEverythingElse)
         })
+        
+        const computersAnswer = document.getElementsByClassName("answerImage")[0]
+
+
     }
 
     document.addEventListener("DOMContentLoaded", loadScript)
@@ -30,8 +35,11 @@
                 <img src="image-rock.png" class="mainImage" alt="rock" width=200 height=200>
                 <img src="image-paper.png" class="mainImage" alt="paper" width=200 height=200>
                 <img src="image-scissors.png" class="mainImage" alt="scissors" width=200 height=200>
+                <img src="image-rock-2.png" class="answerImage" alt="computersRock" width=200 height=200>
+
             </div>
         </div>
+
         <div class="center">
             <p>Click on any image and test your luck</p>
         </div>
