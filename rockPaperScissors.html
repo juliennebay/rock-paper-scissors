@@ -1,7 +1,27 @@
 <!DOCTYPE html>
 <script>
-    function getRandomInt(max) {
+    function getRandomInt(max){
         return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    function play(player, computer){
+        let loserMessage = "You lose :("
+        let winnerMessage = "You win :)"
+        if (player === computer){
+            return "It's a tie!"
+        } else if (player === "rock" && computer === "paper"){
+            return loserMessage
+        } else if (player === "rock" && computer === "scissors"){
+            return winnerMessage
+        } else if (player === "paper" && computer === "rock"){
+            return winnerMessage
+        } else if (player === "paper" && computer === "scissors"){
+            return loserMessage
+        } else if (player === "scissors" && computer === "rock"){
+            return loserMessage
+        } else if (player === "scissors" && computer === "paper"){
+            return winnerMessage
+        }
     }
 
     function loadScript(){
@@ -14,7 +34,7 @@
                }
              })
             computersAnswer.style.display = "block"
-            message.textContent = "You lose"
+            message.textContent = play(event.target.alt, computersAnswer.alt) 
             
             }
 
@@ -40,9 +60,9 @@
                 <img src="image-rock.png" class="mainImage" alt="rock" width=200 height=200>
                 <img src="image-paper.png" class="mainImage" alt="paper" width=200 height=200>
                 <img src="image-scissors.png" class="mainImage" alt="scissors" width=200 height=200>
-                <img src="image-rock-2.png" class="answerImage" alt="computersRock" width=200 height=200>
-                <img src="image-paper-2.png" class="answerImage" alt="computersPaper" width=200 height=200>
-                <img src="image-scissors-2.png" class="answerImage" alt="computersScissors" width=200 height=200>
+                <img src="image-rock-2.png" class="answerImage" alt="rock" width=200 height=200>
+                <img src="image-paper-2.png" class="answerImage" alt="paper" width=200 height=200>
+                <img src="image-scissors-2.png" class="answerImage" alt="scissors" width=200 height=200>
 
             </div>
         </div>
