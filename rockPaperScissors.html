@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <script>
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
     function loadScript(){
         const allImages = document.getElementsByClassName("mainImage")
     
@@ -10,15 +14,16 @@
                }
              })
             computersAnswer.style.display = "block"
+            message.textContent = "You lose"
+            
             }
 
         Array.from(allImages).forEach(img => {
             img.addEventListener("click", hideEverythingElse)
         })
         
-        const computersAnswer = document.getElementsByClassName("answerImage")[0]
-
-
+        const computersAnswer = document.getElementsByClassName("answerImage")[getRandomInt(3)]
+        const message = document.getElementsByClassName("message")[0]
     }
 
     document.addEventListener("DOMContentLoaded", loadScript)
@@ -36,12 +41,17 @@
                 <img src="image-paper.png" class="mainImage" alt="paper" width=200 height=200>
                 <img src="image-scissors.png" class="mainImage" alt="scissors" width=200 height=200>
                 <img src="image-rock-2.png" class="answerImage" alt="computersRock" width=200 height=200>
+                <img src="image-paper-2.png" class="answerImage" alt="computersPaper" width=200 height=200>
+                <img src="image-scissors-2.png" class="answerImage" alt="computersScissors" width=200 height=200>
 
             </div>
         </div>
 
         <div class="center">
-            <p>Click on any image and test your luck</p>
+            <div>
+                <h2 class="message"></h2>
+                <p>Click on any image and test your luck</p>
+            </div>
         </div>
         
     </body>

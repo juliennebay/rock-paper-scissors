@@ -32,3 +32,6 @@ button {
 .answerImage {
     display: none;
 }
+.message {
+    text-align: center;
+}
