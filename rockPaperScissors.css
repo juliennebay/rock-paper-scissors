@@ -1,0 +1,31 @@
+body {
+    background-color: lightcyan;
+    font-family: "Verdana";
+}
+h1 {
+    text-align: center;
+    padding: 20px 10px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.left{
+    width: 60%;
+    display: flex;
+    justify-content: left;
+}
+.mainImage{
+    border: 1px solid black;
+    padding: 35px;
+    margin-right: 10px;
+}
+button {
+    height: 60px;
+    width: 130px;
+    margin-top: 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-family: "Verdana";
+}

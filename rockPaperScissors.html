@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<script>
+    function loadScript(){
+        const allImages = document.getElementsByClassName("mainImage")
+    
+        const hideEverythingElse = (event) => {
+            Array.from(allImages).forEach(img => {
+               if (img !== event.target) {
+                   img.style.display = "none"
+               }
+             })
+            }
+
+        Array.from(allImages).forEach(img => {
+            img.addEventListener("click", hideEverythingElse)
+        })
+    }
+
+    document.addEventListener("DOMContentLoaded", loadScript)
+
+</script>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="rockPaperScissors.css" media="screen" />
+    </head>
+    <body>
+        <h1 class="header">Rock, Paper, Scissors</h1>
+        <div class="center">
+            <div class="left">
+                <img src="image-rock.png" class="mainImage" alt="rock" width=200 height=200>
+                <img src="image-paper.png" class="mainImage" alt="paper" width=200 height=200>
+                <img src="image-scissors.png" class="mainImage" alt="scissors" width=200 height=200>
+            </div>
+        </div>
+        <div class="center">
+            <p>Click on any image and test your luck</p>
+        </div>
+        
+    </body>
+</html>
