@@ -12,9 +12,8 @@ h1 {
     padding: 20px;
 }
 .left {
-    width: 60%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .mainImage, .answerImage {
     border: 1px solid black;
