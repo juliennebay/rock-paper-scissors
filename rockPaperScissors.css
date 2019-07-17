@@ -34,3 +34,8 @@ button {
 .message {
     text-align: center;
 }
+.choice {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}

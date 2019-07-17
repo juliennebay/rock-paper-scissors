@@ -35,7 +35,11 @@
              })
             computersAnswer.style.display = "block"
             message.textContent = play(event.target.alt, computersAnswer.alt) 
+            document.getElementsByClassName("initialMsg")[0].style.display = "none"
             
+             Array.from(choiceMessages).forEach(p => {
+                 p.style.display ="block"
+             })
             }
 
         Array.from(allImages).forEach(img => {
@@ -44,6 +48,7 @@
         
         const computersAnswer = document.getElementsByClassName("answerImage")[getRandomInt(3)]
         const message = document.getElementsByClassName("message")[0]
+        const choiceMessages = document.getElementsByClassName("choice")
     }
 
     document.addEventListener("DOMContentLoaded", loadScript)
@@ -57,20 +62,25 @@
         <h1 class="header">Rock, Paper, Scissors</h1>
         <div class="center">
             <div class="left">
-                <img src="image-rock.png" class="mainImage" alt="rock" width=200 height=200>
-                <img src="image-paper.png" class="mainImage" alt="paper" width=200 height=200>
-                <img src="image-scissors.png" class="mainImage" alt="scissors" width=200 height=200>
-                <img src="image-rock-2.png" class="answerImage" alt="rock" width=200 height=200>
-                <img src="image-paper-2.png" class="answerImage" alt="paper" width=200 height=200>
-                <img src="image-scissors-2.png" class="answerImage" alt="scissors" width=200 height=200>
-
+                <div>
+                    <p class="choice">You chose:</p>
+                    <img src="image-rock.png" class="mainImage" alt="rock" width=200 height=200>
+                    <img src="image-paper.png" class="mainImage" alt="paper" width=200 height=200>
+                    <img src="image-scissors.png" class="mainImage" alt="scissors" width=200 height=200>
+                </div>
+                <div>
+                    <p class="choice">Computer chose:</p>
+                    <img src="image-rock-2.png" class="answerImage" alt="rock" width=200 height=200>
+                    <img src="image-paper-2.png" class="answerImage" alt="paper" width=200 height=200>
+                    <img src="image-scissors-2.png" class="answerImage" alt="scissors" width=200 height=200>
+                </div>
             </div>
         </div>
 
         <div class="center">
             <div>
                 <h2 class="message"></h2>
-                <p>Click on any image and test your luck</p>
+                <p class="initialMsg">Click on any image and test your luck</p>
             </div>
         </div>
         
