@@ -24,6 +24,9 @@ function play(player, computer){
 
 function loadScript(){
     const allImages = document.getElementsByClassName("mainImage")
+    const computersAnswer = document.getElementsByClassName("answerImage")[getRandomInt(3)]
+    const message = document.getElementsByClassName("message")[0]
+    const choiceMessages = document.getElementsByClassName("choice")
 
     const hideEverythingElse = (event) => {
         Array.from(allImages).forEach(img => {
@@ -34,19 +37,21 @@ function loadScript(){
         computersAnswer.style.display = "block"
         message.textContent = play(event.target.alt, computersAnswer.alt) 
         document.getElementsByClassName("initialMsg")[0].style.display = "none"
+        document.getElementsByTagName("button")[0].style.display = "block"
         
          Array.from(choiceMessages).forEach(p => {
              p.style.display ="block"
          })
+     
         }
 
     Array.from(allImages).forEach(img => {
         img.addEventListener("click", hideEverythingElse)
     })
+
+    const resetGame = () => location.reload();
     
-    const computersAnswer = document.getElementsByClassName("answerImage")[getRandomInt(3)]
-    const message = document.getElementsByClassName("message")[0]
-    const choiceMessages = document.getElementsByClassName("choice")
+    document.getElementsByTagName("button")[0].addEventListener("click", resetGame)
 }
 
 document.addEventListener("DOMContentLoaded", loadScript)
