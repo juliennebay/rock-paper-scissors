@@ -34,6 +34,7 @@ function loadScript(){
                img.style.display = "none"
            }
          })
+        event.target.style.cursor = "inherit"
         computersAnswer.style.display = "block"
         message.textContent = play(event.target.alt, computersAnswer.alt) 
         document.getElementsByClassName("initialMsg")[0].style.display = "none"

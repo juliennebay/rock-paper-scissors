@@ -20,6 +20,9 @@ h1 {
     padding: 35px;
     margin-right: 10px;
 }
+.mainImage {
+    cursor: pointer;
+}
 button {
     height: 60px;
     width: 130px;
@@ -28,6 +31,7 @@ button {
     font-size: 14px;
     font-family: "Verdana";
     display: none;
+    cursor: pointer;
 }
 .answerImage {
     display: none;
